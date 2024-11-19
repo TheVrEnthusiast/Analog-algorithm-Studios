@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE EDITOR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set background and text styling */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+        }
+
+        /* Image grid styling */
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Buttons styling */
+        .button-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #ff0000;
+            color: rgb(255, 255, 255);
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2f00ff;
+            transform: scale(1.05);
+        }
+
+        /* Smooth scrolling effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CODE STUDIO WEBSITE</h1>
+
+    <!-- Image Grid -->
+    <div class="image-container">
+        <img src="darkmodeblack.jpeg" alt="Image 1">
+        <img src="graymode.jpeg" alt="Image 2">
+        <img src="lightmode.jpeg" alt="Image 3">
+        <img src="Info.jpeg" alt="Image 4">
+        <img src="hello.jpeg" alt="Image 5">
+        <img src="logo.jpeg" alt="Image 6">
+    </div>
+
+    <!-- Buttons -->
+    <div class="button-container">
+        <!-- Join Discord Button -->
+        <a href="https://discord.gg/xtrs2XsEcm" target="_blank">
+            <button class="button">Join Discord</button>
+        </a>
+        <!-- Download Button (also leads to Discord) -->
+        <a href="https://discord.gg/xtrs2XsEcm" target="_blank">
+            <button class="button">Download</button>
+        </a>
+    </div>
+</body>
+</html>
