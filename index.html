@@ -3,108 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CODE EDITOR</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <title>Analogue Algorithm Studios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <style>
-        /* Reset some default styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Set background and text styling */
         body {
-            background-color: black;
+            background-image: url('Hexic Logo.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Roboto', sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 100vh;
             align-items: center;
             text-align: center;
+            padding-top: 50px;
         }
 
-        h1 {
-            font-size: 3em;
-            margin-top: 20px;
-        }
-
-        /* Image grid styling */
-        .image-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            width: 80%;
-            margin: 20px 0;
-        }
-
-        .image-container img {
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .image-container img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Buttons styling */
-        .button-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: rgb(0, 0, 0);
             display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-bottom: 20px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 10;
         }
 
-        .button {
-            background-color: #ff0000;
-            color: rgb(255, 255, 255);
-            padding: 15px 30px;
+        .top-bar h1 {
+            font-size: 1.8em;
+        }
+
+        .top-bar .left {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .top-bar .right {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .discord-btn {
+            background-color: #000285;
+            color: rgb(168, 168, 168);
+            padding: 10px 20px;
             font-size: 1.2em;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            transition: background-color 0.3s ease;
         }
 
-        .button:hover {
+        .discord-btn:hover {
             background-color: #2f00ff;
             transform: scale(1.05);
         }
 
-        /* Smooth scrolling effect */
-        html {
-            scroll-behavior: smooth;
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-btn {
+            background-color: #0e0769;
+            color: rgb(192, 192, 192);
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #2f00ff;
+            transform: scale(1.05);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            min-width: 200px;
+            color: rgb(136, 136, 136);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .creator-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-top: 10px;
         }
 
     </style>
 </head>
 <body>
-    <h1>CODE STUDIO WEBSITE</h1>
 
-    <!-- Image Grid -->
-    <div class="image-container">
-        <img src="darkmodeblack.jpeg" alt="Image 1">
-        <img src="graymode.jpeg" alt="Image 2">
-        <img src="lightmode.jpeg" alt="Image 3">
-        <img src="Info.jpeg" alt="Image 4">
-        <img src="hello.jpeg" alt="Image 5">
-        <img src="logo.jpeg" alt="Image 6">
+    <div class="top-bar">
+        <div class="left">
+            <div class="dropdown">
+                <button class="dropdown-btn">Description</button>
+                <div class="dropdown-content">
+                    <p>
+                       We make Random Mods, Games, and Apps for no reason. Pretty fun!
+                    </p>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="https://discord.gg/xtrs2XsEcm" target="_blank">
+                <button class="discord-btn">Join Discord</button>
+            </a>
+        </div>
     </div>
 
-    <!-- Buttons -->
-    <div class="button-container">
-        <!-- Join Discord Button -->
-        <a href="https://discord.gg/xtrs2XsEcm" target="_blank">
-            <button class="button">Join Discord</button>
-        </a>
-        <!-- Download Button (also leads to Discord) -->
-        <a href="https://discord.gg/xtrs2XsEcm" target="_blank">
-            <button class="button">Download</button>
+    <div class="footer">
+        <p>Created by <a href="https://www.youtube.com/@thevrenthusiast" target="_blank">The VR Enthusiast</a></p>
+        <a href="https://www.youtube.com/@thevrenthusiast" target="_blank">
+            <img src="tve.jpg" alt="Creator Channel Image" class="creator-img">
         </a>
     </div>
+
 </body>
 </html>
