@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analogue Algorithm Studios</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,58 +13,37 @@
         }
 
         body {
-            background-image: url('Hexic Logo.jpg');
+            background-image: url('AnalogLogo.png');
             background-size: cover;
             background-position: center;
             color: white;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Source Code Pro', monospace;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            height: 100vh;
-            align-items: center;
-            text-align: center;
-            padding-top: 50px;
         }
 
         .top-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
-            z-index: 10;
         }
 
         .top-bar h1 {
             font-size: 1.8em;
         }
 
-        .top-bar .left {
-            flex-grow: 1;
-            display: flex;
-            justify-content: flex-start;
-        }
-
-        .top-bar .right {
-            display: flex;
-            justify-content: flex-end;
-        }
-
         .discord-btn {
-            background-color: #000285;
-            color: rgb(168, 168, 168);
+            background-color: #0004fa;
+            color: #cfcfcf;
             padding: 10px 20px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: 0.3s;
         }
 
         .discord-btn:hover {
@@ -72,94 +51,120 @@
             transform: scale(1.05);
         }
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
+        .hero {
+            text-align: center;
+            padding: 80px 20px 30px;
+            flex-grow: 1;
         }
 
-        .dropdown-btn {
-            background-color: #0e0769;
-            color: rgb(192, 192, 192);
-            padding: 10px 20px;
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
             font-size: 1.2em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #d0d0d0;
         }
 
-        .dropdown-btn:hover {
-            background-color: #2f00ff;
-            transform: scale(1.05);
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
         }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.8);
-            min-width: 200px;
-            color: rgb(136, 136, 136);
-            padding: 10px;
+        .project-card {
+            background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
+            padding: 20px;
+            width: 300px;
             text-align: left;
-            margin-top: 10px;
+            transition: transform 0.3s ease;
         }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
+        .project-card:hover {
+            transform: scale(1.05);
+            background-color: rgba(20, 20, 40, 0.8);
+        }
+
+        .project-card h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 0.95em;
+            color: #cccccc;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #00aaff;
+            text-decoration: none;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
         }
 
         .footer {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
             text-align: center;
+            padding: 30px 0;
+            background-color: rgba(0, 0, 0, 0.6);
         }
 
-        .footer a {
-            color: #ff0000;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
+        .footer p, .footer a {
+            color: #ff4444;
+            font-size: 1.1em;
         }
 
         .creator-img {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             margin-top: 10px;
         }
-
     </style>
 </head>
 <body>
 
     <div class="top-bar">
-        <div class="left">
-            <div class="dropdown">
-                <button class="dropdown-btn">Description</button>
-                <div class="dropdown-content">
-                    <p>
-                       We make Random Mods, Games, and Apps for no reason. Pretty fun!
-                    </p>
-                    <p>
-                        
-                    </p>
-                </div>
-            </div>
+        <h1>Analogue Algorithm Studios</h1>
+        <a href="https://discord.gg/QUVdt4QyPx" target="_blank">
+            <button class="discord-btn">Join Discord</button>
+        </a>
+    </div>
+
+    <div class="hero">
+        <h2>Building Tools & Games That Inspire</h2>
+        <p>
+            We’re a small community of creators who love experimenting with unique tools, mods, and game systems. Whether you're into development, modding, or just tinkering, there's a place here for you.
+        </p>
+    </div>
+
+    <div class="projects">
+        <div class="project-card">
+            <h3>Analog SDK Base</h3>
+            <p>A modular base framework for building experimental Unity SDKs.</p>
+            <a href="https://github.com/TheVrEnthusiast/Analog-SDK-Base" target="_blank">View on GitHub →</a>
         </div>
 
-        <div class="right">
-            <a href="https://discord.gg/xtrs2XsEcm" target="_blank">
-                <button class="discord-btn">Join Discord</button>
-            </a>
+        <div class="project-card">
+            <h3>CODESTUDIO</h3>
+            <p>Prototype IDE environment for code-driven projects, visual feedback.</p>
+            <a href="https://github.com/TheVrEnthusiast/CODESTUDIO" target="_blank">View on GitHub →</a>
         </div>
     </div>
 
     <div class="footer">
         <p>Created by <a href="https://www.youtube.com/@thevrenthusiast" target="_blank">The VR Enthusiast</a></p>
         <a href="https://www.youtube.com/@thevrenthusiast" target="_blank">
-            <img src="tve.jpg" alt="Creator Channel Image" class="creator-img">
+            <img src="tve.jpg" alt="Creator" class="creator-img">
         </a>
     </div>
 
